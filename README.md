@@ -1,4 +1,4 @@
-# Scheduler
+# ZoomScheduler
 
 ZoomScheduler is a Python Flask application that allows users to schedule meetings in Google Calendar and automatically create Zoom meeting links. The application supports multiple calendars and Zoom accounts, providing a practical solution for managing meetings.
 
