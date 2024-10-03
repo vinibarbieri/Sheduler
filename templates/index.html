@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduler</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone-with-data.min.js"></script>
+</head>
+<body>
+    <div class="scheduler">
+        <h1>Chat with Giulia</h1>
+        <h4>Select a time to meet</h4>
+        <div class="scheduler-content">
+            <div id="calendar"></div>
+            <div class="times" id="time-slots">
+                <!-- Horários disponíveis serão exibidos aqui -->
+            </div>
+        </div>
+        <div class="timezone-container">
+            <label for="timezone-select">Time Zone:</label>
+            <div class="custom-select-container" id="timezone-select-container">
+                <div class="custom-select-header">
+                    <span id="selected-timezone">Select a timezone...</span>
+                    <div class="custom-select-arrow">&#9662;</div>
+                </div>
+                <div class="custom-select-dropdown">
+                    <input type="text" id="timezone-search" placeholder="Search..." />
+                    <div class="time-format-toggle">
+                        <label for="time-format">Time Zone</label>
+                        <label>
+                            <input type="radio" name="time-format" value="24h" checked> 24h
+                        </label>
+                        <label>
+                            <input type="radio" name="time-format" value="12h"> am/pm
+                        </label>
+                    </div>
+                    <div id="timezone-options" class="custom-options">
+                        <!-- Timezones serão carregados aqui -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <div class="duration-selector">
+                <label for="duration">Select Duration:</label>
+                <select id="duration">
+                    <option value='0.5'>30 minutes</option>
+                    <option value='0.75'>45 minutes</option>
+                    <option value='1'>1 hour</option>
+                </select>
+            </div>
+        </div>
+        <div id="message"></div>
+    </div>
+
+    <!-- Adicione o elemento de loading aqui -->
+    <div id="loading" class="loading-overlay" style="display: none;">
+        <div class="loading-spinner"></div>
+        <p>Loading...</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>

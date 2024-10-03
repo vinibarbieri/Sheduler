@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Reunião</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone-with-data.min.js"></script>
+</head>
+<body>
+    <div class="scheduler">
+        <div class="header-container">
+            <button onclick="history.back()" class="back-button">&#8592;</button>
+        <h2 class="scheduler-title">Schedule Overview</h2>
+        </div>
+
+        <div class="form-details">            
+            <p>
+                <strong>
+                    <span class="icon">&#x1F464; Giulia Martins</span>
+                    <span class="meeting-time">&#8987; <span id="meeting-duration">30</span>min</span>
+                    <span class="zoom-platform">&#x1F4BB; Zoom</span>
+                </strong>
+            </p>
+            <p>
+                <span class="icon">&#x1F552;</span> 
+                <span id="hour"></span>
+            </p>
+            <p>
+                <span class="icon">&#128197;</span> 
+                <span id="date"></span>
+            </p>
+            <p>
+                <span class="icon">&#127758;</span> 
+                <span id="event-timezone"></span>
+            </p>
+        </div>
+
+        <h3 class="scheduler-title">Enter Details</h3>
+        <form id="booking-form">
+            <div class="form-group">
+                <label for="name">Name*</label>
+                <input type="text" id="name" name="name" required placeholder="Your full name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" required placeholder="Ex: email@example.com">
+            </div>
+
+            <!-- Botão para adicionar mais convidados -->
+            <div id="guests-emails-container"></div>
+            <button type="button" id="add-guest-button" class="add-guest-button">Add Guests</button>
+            <p class="instruction" style="display: none;">Separate the emails with a comma.</p>
+
+            <div class="form-group">
+                <label for="notes">Please share anything that will help prepare for our meeting:</label>
+                <textarea id="notes" name="notes" placeholder="Any notes?"></textarea>
+            </div>
+            <input type="hidden" id="selected-date" name="date">
+            <input type="hidden" id="selected-time" name="time">
+            <input type="hidden" id="timezone" name="timezone">
+            <input type="hidden" id="duration" name="duration">
+            <button type="submit" class="submit-button">Schedule Event</button>
+        </form>
+        <div id="message"></div>
+    </div>
+    <script src="/static/form_script.js"></script>
+</body>
+</html>
+

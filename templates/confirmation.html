@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Scheduled</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- Adiciona a referência ao moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone-with-data.min.js"></script>
+</head>
+<body>
+    <div class="confirmation-container">
+        <div class="confirmation-header">
+            <h2>You are scheduled <span class="icon">&#x2714;</span></h2>
+            <p>A calendar invitation has been sent to your email address.</p>
+            <!-- <p>The Zoom link will be on the description of the event</p> -->
+        </div>
+        <div class="event-details">
+            <h3>Scoping Call</h3>
+            <p>
+                <span class="icon">&#x1F464;</span>
+                <strong>Giulia Martins</strong>
+            </p>
+
+            <p>
+                <span class="icon">&#x1F552;</span> 
+                <span id="confirmation-time"></span>
+            </p>
+            <p>
+                <span class="icon">&#x1F4C5;</span> 
+                <span id="confirmation-date"></span>
+            </p>
+            <p>
+                <span class="icon">&#127758;</span> 
+                <span id="confirmation-timezone"></span>
+            </p>
+            <p>
+                <span class="icon">&#x1F4BB;</span>
+                <span>Zoom link on the event description</span>
+            </p>
+        </div>
+    </div>
+
+    <script src="/static/confirmation_script.js"></script>
+</body>
+</html>

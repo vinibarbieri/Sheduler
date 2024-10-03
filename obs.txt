@@ -1,0 +1,8 @@
+11 - ESSE - Traduzir o site
+1 - Adicionar um parametro de data para pegar os horários livres de um dia específico e mes (get_free_times)
+5 - Melhorar UX/UI das timezones
+6 - Responsividade
+14 - não está alterando a timezone de primeira ao pesquisar
+12 - Remover .json do git
+10 - Arrumar as mensagens de erro
+
